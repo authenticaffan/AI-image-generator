@@ -6,7 +6,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(express.static("public")); // Serve static files (HTML, CSS, JS)
+app.use(express.static("public"));
 
 app.post("/generate", async (req, res) => {
   const { prompt } = req.body;
@@ -34,6 +34,4 @@ app.post("/generate", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
