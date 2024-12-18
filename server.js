@@ -12,7 +12,7 @@ app.post("/generate", async (req, res) => {
   const { prompt } = req.body;
 
   try {
-    const hfResponse = await fetch("https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev", {
+    const hfResponse = await fetch("https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${process.env.HF_API_KEY}`,
